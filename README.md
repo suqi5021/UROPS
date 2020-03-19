@@ -5,19 +5,19 @@ import pandas as pd
 from pandas import Series, DataFrame
 import csv
 
-#open the .tsv file
+# open the .tsv file
 component = DataFrame(csv.reader(open('/Users/suqi/Desktop/Component_6_gene_graphics.tsv'),  delimiter = '\t'))
 
-#Make the first row as the header of the columns.
+# Make the first row as the header of the columns.
 new_header = component.iloc[0]
 component = component[1:]
 component.columns = new_header
 
-#delete the empty useless columns
+# delete the empty useless columns
 for item in ['FC','SS','Set']:
     del component[item]
 
-#Get the name of the genomes from all the entries
+# Get the name of the genomes from all the entries
 list1 = component['Genome'].tolist()
 
 # Get a non-repetitive list of the names of the genome
