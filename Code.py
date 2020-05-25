@@ -6,6 +6,7 @@ import csv
 import sys
 
 #open the .tsv file. Run in terminal. When in the working directory, input in the terminal: python #program_file_name #component_number
+#if do not want to run on terminal, change the "sys.argv[1]" into a string containing the component number without spaces.
 filename = sys.argv[1]
 
 component = DataFrame(csv.reader(open('/Users/suqi/Desktop/Component_%s_gene_graphics.tsv' % (filename)),  delimiter = '\t')) # change the directory to where the tsv file is
