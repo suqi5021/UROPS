@@ -133,7 +133,7 @@ for uniprot_id in ID.split():
 #write the sequence record of these proteins into a fasta file in the working directory that can be referred to if needed
 SeqIO.write(seqlist, "component_%s.fasta" % (filename), "fasta")
 
-#Identify the protein seqeunces with the known pattern for the precursor: WSW or WNW in the 10 amino acid from C terminal
+#Identify the protein seqeunces with the known pattern for the precursor: WSW or WNW in the 10 amino acid from C terminal.This list: precursor_1 contain the most probable precursors since they have the known pattern.
 precursor_1 = []
 
 for record in seqlist:
